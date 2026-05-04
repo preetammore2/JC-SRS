@@ -1,0 +1,278 @@
+/* Apply Page */
+.pageHero { position: relative; padding: 160px 0 80px; background: var(--gradient-hero); overflow: hidden; }
+.heroOverlay { position: absolute; inset: 0; background: radial-gradient(circle at 50% 50%, rgba(232, 165, 32, 0.08) 0%, transparent 50%); }
+.heroContent { text-align: center; }
+.heroContent h1 { color: var(--white); margin: 12px 0 16px; }
+.heroContent p { color: rgba(255,255,255,0.7); font-size: 1.1rem; max-width: 650px; margin: 0 auto; }
+
+/* Progress */
+.progress {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 48px;
+  gap: 0;
+}
+
+.progressItem {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.progressCircle {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 3px solid var(--gray-200);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: var(--gray-700);
+  background: var(--white);
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.progressActive {
+  border-color: var(--gold-primary);
+  color: var(--gold-primary);
+  box-shadow: 0 0 0 4px rgba(232, 165, 32, 0.15);
+}
+
+.progressDone {
+  background: var(--gold-primary);
+  border-color: var(--gold-primary);
+  color: var(--white);
+}
+
+.progressLabel {
+  position: absolute;
+  bottom: -24px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--silver);
+  white-space: nowrap;
+  display: none;
+}
+
+.progressLabelActive { color: var(--gold-primary); }
+
+.progressLine {
+  width: 80px;
+  height: 3px;
+  background: var(--gray-200);
+  transition: background 0.3s ease;
+  margin: 0 8px;
+}
+
+.progressLineDone {
+  background: var(--gold-primary);
+}
+
+/* Form Card */
+.formCard {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  padding: 40px;
+  border: 1px solid var(--gray-100);
+  box-shadow: var(--shadow-sm);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.stepTitle {
+  font-size: 1.4rem;
+  margin-bottom: 28px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--gray-100);
+  color: var(--navy-primary);
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.formRow3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+}
+
+.inputError { border-color: var(--error) !important; }
+
+/* Radio */
+.radioGroup {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.radioLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 0.92rem;
+  color: var(--gray-700);
+}
+
+.radioLabel input[type="radio"] {
+  display: none;
+}
+
+.radioCustom {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid var(--gray-200);
+  position: relative;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.radioLabel input[type="radio"]:checked + .radioCustom {
+  border-color: var(--gold-primary);
+}
+
+.radioLabel input[type="radio"]:checked + .radioCustom::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--gold-primary);
+}
+
+/* Review */
+.reviewGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.reviewSection {
+  background: var(--gray-50);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  border: 1px solid var(--gray-100);
+}
+
+.reviewSection h4 {
+  font-size: 1rem;
+  margin-bottom: 16px;
+  color: var(--gold-primary);
+}
+
+.reviewItem {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--gray-100);
+  font-size: 0.88rem;
+}
+
+.reviewItem:last-child { border-bottom: none; }
+.reviewItem span { color: var(--silver); }
+.reviewItem strong { color: var(--navy-primary); }
+
+/* Declaration */
+.declarationBox {
+  background: rgba(232, 165, 32, 0.05);
+  border: 1px solid rgba(232, 165, 32, 0.2);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.checkboxLabel {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: var(--gray-700);
+  line-height: 1.6;
+}
+
+.checkboxLabel input[type="checkbox"] { display: none; }
+
+.checkboxCustom {
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  border: 2px solid var(--gray-200);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+  font-size: 1.2rem;
+  color: var(--gold-primary);
+  margin-top: 2px;
+}
+
+.checkboxLabel input[type="checkbox"]:checked + .checkboxCustom {
+  border-color: var(--gold-primary);
+  background: rgba(232, 165, 32, 0.1);
+}
+
+/* Nav */
+.formNav {
+  display: flex;
+  gap: 16px;
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid var(--gray-100);
+}
+
+/* Success */
+.successCard {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  padding: 60px 40px;
+  border: 1px solid var(--gray-100);
+  box-shadow: var(--shadow-md);
+}
+
+.successIcon {
+  font-size: 5rem;
+  color: var(--success);
+  margin-bottom: 24px;
+}
+
+.successCard h2 { margin-bottom: 16px; }
+.successCard p { margin: 0 auto 12px; font-size: 1rem; }
+
+.successEmail {
+  font-size: 0.9rem !important;
+  color: var(--silver) !important;
+  margin-top: 24px !important;
+}
+
+.successEmail a {
+  color: var(--gold-primary);
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .formCard { padding: 24px; }
+  .formRow, .formRow3 { grid-template-columns: 1fr; }
+  .reviewGrid { grid-template-columns: 1fr; }
+  .progressLine { width: 40px; }
+  .progressCircle { width: 44px; height: 44px; font-size: 1rem; }
+  .formNav { flex-wrap: wrap; }
+  .pageHero { padding: 140px 0 60px; }
+}

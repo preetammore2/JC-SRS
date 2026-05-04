@@ -1,0 +1,246 @@
+/* Franchise Page Styles */
+
+.pageHero {
+  position: relative;
+  padding: 160px 0 100px;
+  background: var(--gradient-hero);
+  overflow: hidden;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 30%, rgba(232, 165, 32, 0.1) 0%, transparent 50%);
+}
+
+.heroContent {
+  text-align: center;
+}
+
+.heroContent h1 {
+  color: var(--white);
+  margin: 12px 0 16px;
+}
+
+.heroContent > p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.15rem;
+  max-width: 600px;
+  margin: 0 auto 40px;
+}
+
+.priceBadge {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 28px 48px;
+  background: rgba(232, 165, 32, 0.1);
+  border: 2px solid rgba(232, 165, 32, 0.3);
+  border-radius: var(--radius-xl);
+  backdrop-filter: blur(10px);
+}
+
+.priceLabel {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.priceValue {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--gold-primary);
+  margin: 4px 0;
+}
+
+.priceNote {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Benefits */
+.benefitCard {
+  background: var(--white);
+  border: 1px solid var(--gray-100);
+  border-radius: var(--radius-lg);
+  padding: 36px 28px;
+  text-align: center;
+  height: 100%;
+  transition: all 0.4s ease;
+}
+
+.benefitIcon {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(232, 165, 32, 0.1), rgba(27, 58, 92, 0.08));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-size: 1.8rem;
+  color: var(--gold-primary);
+}
+
+.benefitCard h4 {
+  margin-bottom: 10px;
+}
+
+.benefitCard p {
+  font-size: 0.9rem;
+  margin: 0 auto;
+}
+
+/* Steps */
+.stepsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  position: relative;
+}
+
+.stepItem {
+  text-align: center;
+  position: relative;
+}
+
+.stepNumber {
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: var(--gold-primary);
+  opacity: 0.3;
+  margin-bottom: 16px;
+}
+
+.stepItem h4 {
+  color: var(--white);
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.stepItem p {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.92rem;
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+.stepLine {
+  position: absolute;
+  top: 40px;
+  right: -16px;
+  width: 32px;
+  height: 2px;
+  background: rgba(232, 165, 32, 0.3);
+}
+
+/* Requirements */
+.reqGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.reqCard {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 36px;
+  border: 1px solid var(--gray-100);
+  box-shadow: var(--shadow-sm);
+  height: 100%;
+}
+
+.reqHeader {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 28px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--gray-100);
+}
+
+.reqIcon {
+  font-size: 2rem;
+  color: var(--gold-primary);
+}
+
+.reqHeader h3 {
+  font-size: 1.3rem;
+}
+
+.reqList {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.reqList li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  color: var(--gray-700);
+}
+
+.reqCheck {
+  color: var(--gold-primary);
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.gadgetGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.gadgetItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 16px;
+  background: var(--gray-50);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--gray-100);
+  font-size: 0.92rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.gadgetEmoji {
+  font-size: 1.5rem;
+}
+
+/* CTA */
+.ctaSection {
+  position: relative;
+  padding: 100px 0;
+  background: var(--gradient-hero);
+  overflow: hidden;
+}
+
+.ctaGlow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 300px;
+  background: radial-gradient(ellipse, rgba(232, 165, 32, 0.1), transparent 60%);
+}
+
+@media (max-width: 1024px) {
+  .stepsGrid { grid-template-columns: 1fr; gap: 40px; }
+  .stepLine { display: none; }
+}
+
+@media (max-width: 768px) {
+  .reqGrid { grid-template-columns: 1fr; }
+  .gadgetGrid { grid-template-columns: 1fr; }
+  .pageHero { padding: 140px 0 80px; }
+  .priceValue { font-size: 2.5rem; }
+}

@@ -1,0 +1,235 @@
+/* Services Page Styles */
+
+.pageHero {
+  position: relative;
+  padding: 160px 0 80px;
+  background: var(--gradient-hero);
+  overflow: hidden;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 70% 30%, rgba(232, 165, 32, 0.08) 0%, transparent 50%);
+}
+
+.heroContent {
+  text-align: center;
+}
+
+.heroContent h1 {
+  color: var(--white);
+  margin: 12px 0 16px;
+}
+
+.heroContent p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.15rem;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 48px;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 24px;
+  border: 2px solid var(--gray-200);
+  border-radius: var(--radius-xl);
+  background: var(--white);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--gray-700);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab:hover {
+  border-color: var(--gold-primary);
+  color: var(--gold-primary);
+}
+
+.tabActive {
+  background: var(--gradient-gold);
+  border-color: var(--gold-primary);
+  color: var(--navy-dark);
+}
+
+.tabIcon {
+  font-size: 1.2rem;
+}
+
+/* Tab Content */
+.tabContent {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--gray-100);
+  padding: 40px;
+  box-shadow: var(--shadow-sm);
+}
+
+.tabHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.tabIconLarge {
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.tabHeader h3 {
+  margin-bottom: 8px;
+}
+
+.tabHeader p {
+  font-size: 0.95rem;
+}
+
+.serviceGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.serviceItem {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 20px;
+  background: var(--gray-50);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--gray-100);
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.serviceEmoji {
+  font-size: 1.5rem;
+}
+
+.serviceName {
+  flex: 1;
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--gray-800);
+}
+
+.serviceCheck {
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+/* Category Cards */
+.categoryCard {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  border: 1px solid var(--gray-100);
+  box-shadow: var(--shadow-sm);
+  height: 100%;
+}
+
+.catHeader {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--gray-100);
+  border-left: 4px solid;
+  padding-left: 16px;
+}
+
+.catIcon {
+  font-size: 1.8rem;
+}
+
+.catHeader h4 {
+  font-size: 1.1rem;
+}
+
+.catList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.catList li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.92rem;
+  color: var(--gray-700);
+}
+
+.catCheck {
+  color: var(--gold-primary);
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+/* Advantages */
+.advantageGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.advantageCard {
+  text-align: center;
+  padding: 32px 20px;
+}
+
+.advIcon {
+  font-size: 2.5rem;
+  color: var(--gold-primary);
+  margin-bottom: 16px;
+}
+
+.advantageCard p {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0 auto;
+}
+
+/* CTA */
+.ctaSection {
+  padding: 80px 0;
+  background: var(--gray-50);
+}
+
+@media (max-width: 1024px) {
+  .advantageGrid { grid-template-columns: repeat(3, 1fr); }
+  .tabContent { padding: 28px; }
+}
+
+@media (max-width: 768px) {
+  .advantageGrid { grid-template-columns: repeat(2, 1fr); }
+  .tabs { gap: 8px; }
+  .tab { padding: 10px 16px; font-size: 0.82rem; }
+  .tabHeader { flex-direction: column; }
+  .serviceGrid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  .advantageGrid { grid-template-columns: 1fr; }
+  .pageHero { padding: 140px 0 60px; }
+}
